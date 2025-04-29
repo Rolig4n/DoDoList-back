@@ -22,4 +22,4 @@ Route::get('/tarefas/{tarefa}/update', [TarefaController::class, 'update'])->nam
 
 Route::delete('/tarefas/{tarefa}/destroy', [TarefaController::class, 'destroy'])->name('tarefas.destroy');
 
-require __DIR__.'/auth.php';
+// require __DIR__.'/auth.php';
