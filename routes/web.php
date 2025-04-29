@@ -11,7 +11,8 @@ Route::get('/', function () {
 
 Route::get('/tarefas', [TarefaController::class, 'index'])->name('tarefas.index');
 
-Route::get('/tarefas/create', [TarefaController::class, 'create'])->name('tarefas.create');
+// so functiona para projeto front-end
+// Route::get('/tarefas/create', [TarefaController::class, 'create'])->name('tarefas.create');
 
 Route::post('/tarefas', [TarefaController::class, 'store'])->name('tarefas.store');
 

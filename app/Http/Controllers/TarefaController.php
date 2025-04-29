@@ -23,10 +23,10 @@ class TarefaController extends Controller
             });
     }
 
-    public function create()
-    {
-        return view('tarefas.create');
-    }
+    // public function create()
+    // {
+    //     return view('tarefas.create');
+    // }
 
     public function store(Request $request)
     {
