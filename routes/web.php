@@ -20,7 +20,7 @@ Route::post('/tarefas', [TarefaController::class, 'store'])->name('tarefas.store
 
 Route::get('/tarefas/{tarefa}/edit', [TarefaController::class, 'edit'])->name('tarefas.edit');
 
-Route::get('/tarefas/{tarefa}/update', [TarefaController::class, 'update'])->name('tarefas.update');
+Route::put('/tarefas/{tarefa}/update', [TarefaController::class, 'update'])->name('tarefas.update');
 
 Route::delete('/tarefas/{tarefa}/destroy', [TarefaController::class, 'destroy'])->name('tarefas.destroy');
 
