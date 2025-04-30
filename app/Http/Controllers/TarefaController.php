@@ -70,8 +70,9 @@ class TarefaController extends Controller
         return response('Deletada com sucesso', 201);
     }
 
-    // public function show($id)
-    // {
-    //     return view('tarefas.show', compact('id'));
-    // }
+    public function show($id)
+    {
+        $tarefa = Tarefa::find($id);
+        return response($tarefa, 201);
+    }
 }

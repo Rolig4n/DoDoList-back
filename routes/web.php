@@ -11,6 +11,8 @@ Route::get('/', function () {
 
 Route::get('/tarefas', [TarefaController::class, 'index'])->name('tarefas.index');
 
+Route::get('/tarefas/{id}', [TarefaController::class, 'show'])->name('tarefas.show');
+
 // so functiona para projeto front-end
 // Route::get('/tarefas/create', [TarefaController::class, 'create'])->name('tarefas.create');
 
