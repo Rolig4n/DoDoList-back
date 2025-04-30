@@ -35,7 +35,7 @@ class TarefaController extends Controller
             'titulo' => 'required|string|max:255',
             'descricao' => 'required',
             'data_vencimento' => 'required|date',
-            'status' => [Rule::enum(StatusTarefa::class)]// ainda nao entendi como validar enum
+            'status' => [Rule::enum(StatusTarefa::class)]
         ]);
 
         $novaTarefa = Tarefa::create($data);
@@ -55,7 +55,7 @@ class TarefaController extends Controller
             'titulo' => 'required|string|max:255',
             'descricao' => 'required',
             'data_vencimento' => 'required|date',
-            'status' => [Rule::enum(StatusTarefa::class)],// ainda nao entendi como validar enum
+            'status' => [Rule::enum(StatusTarefa::class)],
         ]);
 
         $tarefa->update($data);

@@ -7,7 +7,7 @@
 2. Clone este repositório em sua máquina local.
 
     ```bash
-    git clone https://github.com/seu-usuario/DoDoList-back.git
+    git clone https://github.com/Rolig4n/DoDoList-back.git
     ```
 
 3. Navegue até o diretório do projeto.
@@ -45,8 +45,15 @@ caso tenha um problema de *Failed to listen on 127.0.0.1:8000 (reason: ?)*, abre
 ```
 isso era listar o arquivo de configuração php.ini carregado, clique nele e verifique se a variavel `variables_order` tem o seguinte valor `"GPCS"`
 
-## Licença
+## Decisões
+
+- O Back end foi a parte mais fácil do projeto, iniciar por ele foi o mais natural pela minha facilidade
+Comecei criando a classe, controller e a migração do banco de dados relacionado a Tarefa.
+Depois estabeleci as rotas da api, atualizei a controller para fazer as o CRUD funcionar corretamente.
+Meu principal desafio foi a autenticação, pois por padrão, o laravel 12 usa o sanctum para as SPAs (Singel Page Aplication) e por conta da aplicação Backend e Frontend ser hospedada no mesmo "dominio pai", se faz necessário aplicar CORS (Cross-Origin Resource Sharing). A configuração foi simples e o próprio laravel ajudou nisso.
+- model Tarefa Enum: foi a melhor decisão para o campo status, pois creio q guardar 0 ou 1 para um status string como "Em andamento" é melhor para criar lista na view, tirando a necessecidade de criar conversões de difícil manutenção.
+- A autenticação de login já esta pronta, foi feita usanda a configuração já existente no projeto, unico ponto a ser revisado são os dados do front end.
+
+### Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
-
-### 
